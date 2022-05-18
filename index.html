@@ -12,13 +12,132 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+
     <title>Vanilla-Weather-App</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Hello World</h1>
+    
+ <div class="card">
+    <div class="card-body">
+   
+      <div class="weatherApp">
 
-      <a href="" class="btn btn-primary">click me</a>
+      <div class="container">
+      <form>
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="city"
+              id="enterCity"
+              placeholder="Enter a City here"
+              class="form-control search-input"
+              autocomplete="off"
+              autofocus="on"
+            />
+          </div>
+          <div class="col-3 p-0">
+            <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
+          </div>
+
+          <div class="cityInfo">
+            <div class="row">
+              <div class="col-6">
+            <h1>
+              <div class="cityname"> Berlin
+             <span class="time"> 07:29</span> </div> </h1>
+            
+              <span class="date">  Saturday 3 March </span>
+            </div>
+             </div>
+              <br/>
+                <div class="row justify-content-center">
+               <div class="col-4">
+              <h2> 
+                <span class="emojiGrad" >☀</span> 
+                <br/>     
+                <span class="day" id="dayGrad"> 17 </span>
+                <span class="degrees">
+                 <a href="#" id="celciusDay">°C</a> | <a href="#"  id="fahrenheitDay">°F </a>   </span>
+               
+               </h2>
+               <ul>
+               <li>
+                 Humidity:  <strong>60%</strong></li>
+                  <li> Wind: <strong> 6,17 km/h</strong>
+               </li>
+              </ul>
+               </div>
+
+            </div>
+ 
+        </div>
+      </form>
+
+      <div class="fiveDaysForecast col">
+        <div class="row">
+        <div class="forecast">
+            <div class="forecast-days">Mon</div>  
+            <canvas width="38" height="38" >
+            <div class="forecast-temperature">
+              <span class="forecast-day-temperature">17°</span>
+              <span class="forecast-night-temperature">6°</span>
+            </div>
+          </div>
+        
+           <div class="row">
+        <div class="forecast">
+            <div class="forecast-days">Thue</div>  
+            <canvas width="38" height="38" >
+            <div class="forecast-temperature">
+              <span class="forecast-day-temperature">19°</span>
+              <span class="forecast-night-temperature">8°</span>
+            </div>
+          </div>
+
+           <div class="row">
+        <div class="forecast">
+            <div class="forecast-days">Wed</div>  
+            <canvas width="38" height="38" >
+            <div class="forecast-temperature">
+              <span class="forecast-day-temperature">15°</span>
+              <span class="forecast-night-temperature">6°</span>
+            </div>
+          </div>
+
+           <div class="row">
+        <div class="forecast">
+            <div class="forecast-days">Thur</div>  
+            <canvas width="38" height="38" >
+            <div class="forecast-temperature">
+              <span class="forecast-day-temperature">34°</span>
+              <span class="forecast-night-temperature">20°</span>
+            </div>
+          </div>
+
+           <div class="row">
+        <div class="forecast">
+            <div class="forecast-days">Fri</div>  
+            <canvas width="38" height="38" >
+            <div class="forecast-temperature">
+              <span class="forecast-day-temperature">23°</span>
+              <span class="forecast-night-temperature">5°</span>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+      </div>
+      
+   
+      
+
+                       </div>
+        <footer>
+          coded by <a href="" target="_blank" rel="noopener norefereer"> Mary Nevermann</a>
+           <a href="" target="_blank" rel="noopener norefereer">hosted on Netlify</a>
+        </footer>
+                      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
