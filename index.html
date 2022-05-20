@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="src/style.css" />
+
+       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+   
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla-Weather-App</title>
   </head>
-  <body>
-    
- <div class="card">
-    <div class="card-body">
-   
-      <div class="weatherApp">
 
-      <div class="container">
-      <form>
-        <div class="row">
-          <div class="col-9">
-            <input
+
+  <body>
+     <div class="container">
+        
+          <div class="weatherApp">
+            <form>
+             <div class="row">
+              <div class="col-9">
+                 <input
               type="city"
               id="enterCity"
               placeholder="Enter a City here"
@@ -34,111 +35,107 @@
               autocomplete="off"
               autofocus="on"
             />
-          </div>
-          <div class="col-3 p-0">
-            <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
-          </div>
-
-          <div class="cityInfo">
-            <div class="row">
-              <div class="col-6">
-            <h1>
-              <div class="cityname"> Berlin
-             <span class="time"> 07:29</span> </div> </h1>
-            
-              <span class="date">  Saturday 3 March </span>
-            </div>
-             </div>
-              <br/>
-                <div class="row justify-content-center">
-               <div class="col-4">
-              <h2> 
-                <span class="emojiGrad" >☀</span> 
-                <br/>     
-                <span class="day" id="dayGrad"> 17 </span>
-                <span class="degrees">
-                 <a href="#" id="celciusDay">°C</a> | <a href="#"  id="fahrenheitDay">°F </a>   </span>
-               
-               </h2>
-               <ul>
-               <li>
-                 Humidity:  <strong>60%</strong></li>
-                  <li> Wind: <strong> 6,17 km/h</strong>
-               </li>
-              </ul>
                </div>
+             <div class="col-3 p-0">
+            <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
+            </div>
+
+
+           <div class="cityInfo">
+
+              <div class="cityTime">
+             
+                <h2>
+                 <strong> Berlin
+                 <span class="time"> 07:29</span></strong> 
+                </h2>
+                <span class="date">  Saturday 3 March </span>
+                <br/>
+                <span class="currently"> Sunny ☀</span>
+             </div>
+              
+
+              <div class="row">
+                  <div class="col-6">
+                      
+                               <img src="image/icons8-temperature.gif"  />
+                           </div>
+                            <div class="col-6">
+                             <h3> <span class="day" id="dayGrad"> 17 </span>
+                                 <span class="degrees">
+                                 <a href="#" id="celciusDay">°C</a> | <a href="#"  id="fahrenheitDay">°F </a>  </span>
+                             </h3>
+                                 <ul>
+                                    <li>
+                               Humidity:  <strong>60%</strong></li>
+                              <li> Wind: <strong> 6,17 km/h</strong>
+                              </li>
+                               <li> precipitation: <strong> 0%</strong>
+                               </li>
+                                 </ul> 
+                            </div> 
+                       
+                      
+                   
+                 
+                   
+                  </div>
 
             </div>
- 
-        </div>
-      </form>
-
-      <div class="fiveDaysForecast col">
-        <div class="row">
-        <div class="forecast">
-            <div class="forecast-days">Mon</div>  
-            <canvas width="38" height="38" >
-            <div class="forecast-temperature">
-              <span class="forecast-day-temperature">17°</span>
-              <span class="forecast-night-temperature">6°</span>
-            </div>
-          </div>
-        
-           <div class="row">
-        <div class="forecast">
-            <div class="forecast-days">Thue</div>  
-            <canvas width="38" height="38" >
-            <div class="forecast-temperature">
-              <span class="forecast-day-temperature">19°</span>
-              <span class="forecast-night-temperature">8°</span>
-            </div>
-          </div>
-
-           <div class="row">
-        <div class="forecast">
-            <div class="forecast-days">Wed</div>  
-            <canvas width="38" height="38" >
-            <div class="forecast-temperature">
-              <span class="forecast-day-temperature">15°</span>
-              <span class="forecast-night-temperature">6°</span>
-            </div>
-          </div>
-
-           <div class="row">
-        <div class="forecast">
-            <div class="forecast-days">Thur</div>  
-            <canvas width="38" height="38" >
-            <div class="forecast-temperature">
-              <span class="forecast-day-temperature">34°</span>
-              <span class="forecast-night-temperature">20°</span>
-            </div>
-          </div>
-
-           <div class="row">
-        <div class="forecast">
-            <div class="forecast-days">Fri</div>  
-            <canvas width="38" height="38" >
-            <div class="forecast-temperature">
-              <span class="forecast-day-temperature">23°</span>
-              <span class="forecast-night-temperature">5°</span>
-            </div>
-          </div>
-          </div>
-          </div>
-
-
-      </div>
+           </form>
       
-   
-      
-
+                         <div class="card" style="width: 11rem;">
+                            <div class="card-body">
+                        <h5 class="card-title">Mon</h5>
+                         <h6 class="card-subtitle mb-2 text-muted">23 Mai 🌨</h6>
+                       <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
                        </div>
-        <footer>
-          coded by <a href="" target="_blank" rel="noopener norefereer"> Mary Nevermann</a>
-           <a href="" target="_blank" rel="noopener norefereer">hosted on Netlify</a>
-        </footer>
-                      </div>
-    </div>
-    <script src="src/app.js"></script>
+                        </div>
+
+                             <div class="card" style="width: 11rem;">
+                            <div class="card-body">
+                        <h5 class="card-title">Tue</h5>
+                         <h6 class="card-subtitle mb-2 text-muted">24 Mai ⛅</h6>
+                       <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
+                           </div>
+                            </div>
+
+                              <div class="card" style="width: 11rem;">
+                            <div class="card-body">
+                        <h5 class="card-title">Wed</h5>
+                         <h6 class="card-subtitle mb-2 text-muted">25 Mai ☔</h6>
+                       <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
+                           </div>
+                            </div>
+
+                              <div class="card" style="width: 11rem;">
+                            <div class="card-body">
+                        <h5 class="card-title">Thu</h5>
+                         <h6 class="card-subtitle mb-2 text-muted">26 Mai 🌧</h6>
+                       <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
+                           </div>
+                            </div>
+
+                              <div class="card" style="width: 11rem;">
+                            <div class="card-body">
+                        <h5 class="card-title">Fri</h5>
+                         <h6 class="card-subtitle mb-2 text-muted">27 Mai ❄</h6>
+                       <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
+                           </div>
+                            </div>
+
+
+                                  
+      
+              </div>
+                  <br/>
+              <footer>
+           coded by <a href="" target="_blank" rel="noopener norefereer"> Mary Nevermann</a>
+           <a href="" target="_blank" rel="noopener norefereer"> open source on Github</a>
+           <a href="" target="_blank" rel="noopener norefereer"> hosted on Netlify</a>
+              </footer>
+       
+      </div>
+        <script src="src/app.js"></script>
   </body>
 </html>
