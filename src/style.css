@@ -8,19 +8,31 @@ h2 {
   font-size: 24px;
 }
 h3 {
+  text-align: center;
   position: relative;
+  left: 100px;
+  top: 15px;
 }
 li {
+  display: block;
   list-style: none;
   line-height: 19px;
   font-size: 16px;
   color: rgb(135, 135, 135);
 }
+img {
+  margin: 0 auto;
+  display: block;
+  max-width: 80px;
+}
+footer {
+  max-width: 900px;
+  margin: 30px auto;
+}
 
 .weatherApp {
   max-width: 900px;
   margin: 30px auto;
-
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 20px;
@@ -35,4 +47,8 @@ li {
 
 .night {
   color: rgb(135, 135, 135);
+}
+.card {
+  position: relative;
+  top: 25px;
 }
