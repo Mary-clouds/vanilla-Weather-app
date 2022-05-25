@@ -61,3 +61,11 @@ footer {
   position: relative;
   top: 25px;
 }
+.active {
+  text-decoration: none;
+
+  cursor: default;
+}
+.active:hover {
+  color: darkgray;
+}
