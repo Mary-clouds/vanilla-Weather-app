@@ -1,2 +1,3 @@
-let apiKey = f9868c3fe8df6a254137c9828900651a;
-//let apiUrl = api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=apiKey;
+let key = "6bc1680dd34806c7841222011879a9e8";
+let city = "Berlin";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
