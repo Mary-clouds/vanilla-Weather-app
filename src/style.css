@@ -20,12 +20,6 @@ li {
   color: rgb(135, 135, 135);
 }
 
-img {
-  margin: 0 auto;
-  display: block;
-  max-width: 80px;
-}
-
 footer {
   max-width: 900px;
   margin: 30px auto;
@@ -39,12 +33,18 @@ footer {
   border-radius: 20px;
 }
 
-.currently {
+.description {
   margin-bottom: 30px;
 }
 .date {
   margin-bottom: 30px;
 }
+.thermometerIcon {
+  margin: 0 auto;
+  display: block;
+  max-width: 80px;
+}
+
 .degrees {
   font-size: 18px;
   position: relative;
