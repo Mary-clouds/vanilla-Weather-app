@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
 
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla-Weather-App</title>
@@ -21,26 +21,26 @@
 
   <body>
      <div class="container">
-       
-          <div class="weatherApp">
-            <form id="citiesTemperature">
-             <div class="row">
-              <div class="col-9">
-                 <input
-              type="city"
-              id="enterCity"
-              placeholder="Enter a City here"
-              class="form-control search-input"
-              autocomplete="off"
-              autofocus="on"
-            />
+        
+            <div class="weatherApp">
+             <form id="citiesTemperature">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="city"
+                    id="enterCity"
+                    placeholder="Enter a City here"
+                    class="form-control search-input"
+                    autocomplete="off"
+                    autofocus="on"
+                 />
                </div>
              <div class="col-3 p-0">
-            <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
+              <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
             </div>
 
 
-           <div class="cityInfo">
+            <div class="cityInfo">
 
               <div class="cityTime">
              
@@ -48,11 +48,14 @@
                  <strong> <span id="cityInput">Berlin</span> 
                  <span class="time"> 07:29</span></strong> 
                 </h2>
+               
                 <span class="date" id="currentDate">  Saturday 3 Mai </span>
                 <br/>
                 <span class="description"> 
-                  <img  src="" alt="clear" id="icon"/>
+                  <img  src="https://openweathermap.org/img/wn/01d.png" alt="clear sky" id="icon"/>
+                        
                 </span>
+               
              </div>
               
              <h3>
@@ -141,16 +144,17 @@
       
               </div>    
               
-      </div>
+     
+         
+              
+             </div>
 
+         
               <footer>
-           coded by <a href="" target="_blank" rel="noopener norefereer"> Mary Nevermann</a>
-           <a href="" target="_blank" rel="noopener norefereer"> open source on Github</a>
-           <a href="" target="_blank" rel="noopener norefereer"> hosted on Netlify</a>
+                 coded by <a href="" target="_blank" rel="noopener norefereer"> Mary Nevermann</a>
+                <a href="" target="_blank" rel="noopener norefereer"> open source on Github</a>
+                <a href="" target="_blank" rel="noopener norefereer"> hosted on Netlify</a>
               </footer>
-          
-
-
         <script src="src/app.js"></script>
   </body>
 </html>

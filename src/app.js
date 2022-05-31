@@ -32,13 +32,20 @@ fahrenheitLink.addEventListener("click", convertFahrenheitTemperature);
 let celciusLink = document.querySelector("#celciusDay");
 celciusLink.addEventListener("click", convertCelciusTemperature);
 
-function displayDate() {
+function displayDate(timestamp) {
   //this function will return the current date and month
   //voir ci cette partie block le code
-  let today = new Date();
+
+  let today = new Date(timestamp);
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Friday", "Saturday"];
   let day = days[today.getDay()];
   let date = today.getDate();
+  let hours = today.getHours();
+  let minutes = today.getMinutes();
+  if (hours < 10 && minutes < 10) {
+    hours = `0${hours} `;
+    minutes = `0${minutes}`;
+  }
   let months = [
     "January",
     "February",
@@ -58,7 +65,6 @@ function displayDate() {
 
   newDate.innerHTML = `${day} ${date} ${month} `;
 }
-
 function showTemperature(response) {
   let degrees = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#dayGrad");
@@ -88,16 +94,10 @@ function showTemperature(response) {
 
 function displayCity(event) {
   event.preventDefault();
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  displayDate();
   let cityElement = document.querySelector("#enterCity");
   let newCity = document.querySelector("#cityInput");
+
   if (cityElement.value.length >= 3) {
     newCity.innerHTML = `${cityElement.value} ${hours}:${minutes}`;
     searchCity(cityElement.value);
