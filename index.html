@@ -35,31 +35,32 @@
                     autofocus="on"
                  />
                </div>
-             <div class="col-3 p-0">
-              <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
-            </div>
-
-
-            <div class="cityInfo">
-
-              <div class="cityTime">
-             
-                <h2>
-                 <strong> <span id="cityInput">Berlin</span> 
-                 <span class="time"> 07:29</span></strong> 
-                </h2>
-               
-                <span class="date" id="currentDate">  Saturday 3 Mai </span>
-                <br/>
-                <span class="description"> 
-                  <img  src="https://openweathermap.org/img/wn/01d.png" alt="clear sky" id="icon"/>
-                        
-                </span>
-               
-             </div>
+                <div class="col-3 p-0">
+                 <input type="submit" value="Search" class="btn btn-primary" id="searchButton" />
+                 </div>
               
-             <h3>
-              <div class="row">
+               </form>
+
+
+
+                 <div class="cityInfo">
+                <h2 id="city">    
+                 <strong> <span id="cityInput" >Berlin</span> 
+                 <span id="cityTime"> </span></strong>
+                 <br/>   
+                 
+                <span id="currentDate">  Saturday 3 Mai</span>
+                <br/>
+                <span id="clearfix description"> 
+                  <img  src="" alt="clear sky" id="icon" class="float-left"/>
+                </span>
+                </h2>
+                 </div>
+              
+
+
+               <h3>
+                <div class="row">
                   <div class="col-1">
                                
                                <img class="thermometerIcon" src="image/icons8-temperature.gif"  />
@@ -78,7 +79,6 @@
                             <div class="col-3">
                             
                               <ul>
-                                 
                               
                                <li id="humidity"> Humidity:  <strong>60%</strong>
                               </li>
@@ -93,12 +93,14 @@
                    
                  
                    
-                  </div>
-                  </h3>
+                      </div>
+                     </h3>
+            
+                    
+                    
 
-            </div>
-           </form>
-      
+                     
+                      <div class="card-group">
                          <div class="card" style="width: 11rem;">
                             <div class="card-body">
                         <h5 class="card-title">Mon</h5>
@@ -106,7 +108,9 @@
                        <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
                        </div>
                         </div>
+                      
 
+                           
                              <div class="card" style="width: 11rem;">
                             <div class="card-body">
                         <h5 class="card-title">Tue</h5>
@@ -114,15 +118,21 @@
                        <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
                            </div>
                             </div>
+                            
 
-                              <div class="card" style="width: 11rem;">
+                         
+                           
+                            <div class="card" style="width: 11rem;">
                             <div class="card-body">
                         <h5 class="card-title">Wed</h5>
                          <h6 class="card-subtitle mb-2 text-muted">25 Mai ☔</h6>
                        <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
                            </div>
                             </div>
+                             
 
+                            
+                          
                               <div class="card" style="width: 11rem;">
                             <div class="card-body">
                         <h5 class="card-title">Thu</h5>
@@ -130,7 +140,9 @@
                        <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
                            </div>
                             </div>
+                           
 
+                            
                               <div class="card" style="width: 11rem;">
                             <div class="card-body">
                         <h5 class="card-title">Fri</h5>
@@ -138,19 +150,15 @@
                        <p class="card-text">  25°C|°F <span class="night"> 18°C|°F</span> </p>
                            </div>
                             </div>
-
-
-                                  
-      
-              </div>    
-              
-     
-         
-              
-             </div>
+                      </div>
+                      </div>
+                      </div>            
+                   
+          
 
          
-              <footer>
+                  
+                <footer>
                  coded by <a href="" target="_blank" rel="noopener norefereer"> Mary Nevermann</a>
                 <a href="" target="_blank" rel="noopener norefereer"> open source on Github</a>
                 <a href="" target="_blank" rel="noopener norefereer"> hosted on Netlify</a>

@@ -24,7 +24,6 @@ footer {
   max-width: 900px;
   margin: 30px auto;
 }
-
 .weatherApp {
   max-width: 900px;
   margin: 20px auto;
@@ -36,9 +35,7 @@ footer {
 .description {
   margin-bottom: 30px;
 }
-.date {
-  margin-bottom: 30px;
-}
+
 .thermometerIcon {
   margin: 0 auto;
   display: block;
@@ -57,9 +54,14 @@ footer {
 .night {
   color: rgb(135, 135, 135);
 }
+
 .card {
   position: relative;
   top: 25px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
 }
 .active {
   text-decoration: none;

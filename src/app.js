@@ -22,8 +22,9 @@ function convertCelciusTemperature(event) {
   celciusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   //convert celcius by selecting the celcius id and changing the day temperature
+  let celciusConvertion = (fahrenheitTemperature - 32) / 1.8;
   let celciusTemperature = document.querySelector("#dayGrad");
-  celciusTemperature.innerHTML = Math.round(celciusTemperature);
+  celciusTemperature.innerHTML = Math.round(celciusConvertion);
 }
 let celciusTemp = null;
 let fahrenheitLink = document.querySelector("#fahrenheitDay");
@@ -32,20 +33,15 @@ fahrenheitLink.addEventListener("click", convertFahrenheitTemperature);
 let celciusLink = document.querySelector("#celciusDay");
 celciusLink.addEventListener("click", convertCelciusTemperature);
 
-function displayDate(timestamp) {
+let today = new Date();
+function displayDate() {
   //this function will return the current date and month
   //voir ci cette partie block le code
 
-  let today = new Date(timestamp);
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Friday", "Saturday"];
   let day = days[today.getDay()];
   let date = today.getDate();
-  let hours = today.getHours();
-  let minutes = today.getMinutes();
-  if (hours < 10 && minutes < 10) {
-    hours = `0${hours} `;
-    minutes = `0${minutes}`;
-  }
+
   let months = [
     "January",
     "February",
@@ -65,6 +61,7 @@ function displayDate(timestamp) {
 
   newDate.innerHTML = `${day} ${date} ${month} `;
 }
+
 function showTemperature(response) {
   let degrees = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#dayGrad");
@@ -89,21 +86,29 @@ function showTemperature(response) {
   );
   descriptionElement.innerHTML = response.data.weather[0].description;
   //change the value of description attribute to...
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
 function displayCity(event) {
   event.preventDefault();
-  displayDate();
+  let hours = today.getHours();
+  let minutes = today.getMinutes();
+  if (hours < 10 && minutes < 10) {
+    hours = `0${hours} `;
+    minutes = `0${minutes}`;
+  }
+
   let cityElement = document.querySelector("#enterCity");
   let newCity = document.querySelector("#cityInput");
 
   if (cityElement.value.length >= 3) {
-    newCity.innerHTML = `${cityElement.value} ${hours}:${minutes}`;
+    newCity.innerHTML = `${cityElement.value}  ${hours}:${minutes}`;
     searchCity(cityElement.value);
   } else {
     alert(` please enter a city`);
   }
+  displayDate();
+  displayForecast();
 }
 
 let citynames = document.querySelector("#citiesTemperature");
